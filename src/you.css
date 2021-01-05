@@ -1,0 +1,124 @@
+/*
+ * @Author: Kanata You 
+ * @Date: 2021-01-04 01:30:31 
+ * @Last Modified by: Kanata You
+ * @Last Modified time: 2021-01-04 17:13:56
+ */
+
+body {
+  text-align: center;
+  font-family: var(--monospace);
+  background-attachment: fixed;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;  /* 渲染速度优先 */
+  line-height: 1.5;
+}
+
+#root {
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* prevent default style */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:focus, button:focus, textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #f8f8f8;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #dddddd;
+  background-clip: padding-box;
+  min-height: 28px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+
+
+/* Box sizing rules */
+*,  *::before,  *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],  ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body, h1, h2, h3, h4, p,
+ul[class],  ol[class],
+li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,  button, textarea, select {
+  font: inherit;
+}
+
+
+/* CSSRESET */
+:root {
+  /* Colors */
+  --main-border-color: #ddd;
+  --primary-border: #037dba;
+  --gray-20: #404346;
+  --gray-60: #8a8d91;
+  --gray-70: #bcc0c4;
+  --gray-80: #c9ccd1;
+  --gray-90: #e4e6eb;
+  --gray-95: #f0f2f5;
+  --gray-100: #f5f7fa;
+  --primary-blue: #037dba;
+  --secondary-blue: #0396df;
+  --tertiary-blue: #c6efff;
+  --flash-blue: #4cf7ff;
+  --outline-blue: rgba(4, 164, 244, 0.6);
+  --navy-blue: #035e8c;
+  --red-25: #bd0d2a;
+  --secondary-text: #65676b;
+  --white: #fff;
+  --yellow: #fffae1;
+
+  --outline-box-shadow: 0 0 0 2px var(--outline-blue);
+  --outline-box-shadow-contrast: 0 0 0 2px var(--navy-blue);
+
+  /* Fonts */
+  --sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Yu Mincho", 游明朝,
+    'Liberation Mono', 'Lucida Console', 'Courier New', 'Segoe UI', Roboto, Helvetica, sans-serif;
+  --monospace: Ubuntu, ubuntu, source-code-pro, Menlo, Monaco, Consolas, monospace;
+}
